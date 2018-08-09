@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+<body>
+<h1>Main page!</h1><br>
+    {% if user.is_authenticated %}
+    <h2>Welcome {{name}}</h2>
+    <h3>You are working with {{ company }} company list.</h3>
+    <ul>
+        <li><a href="/accounts/logout">Logout</a></li>
+        <li><a href="/api">api</a></li>
+    </ul>
+
+    {% else %}
+    <h2>Let's login</h2>
+    <ul>
+        <li><a href="/accounts/login">Login</a></li>
+        <li><a href="/register">Register</a></li>
+    </ul>
+    {% endif %}
+
+</body>
+</html>
